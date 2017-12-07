@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!--数据库驱动-->
+	<classPathEntry location="./mysql-connector-java-5.1.17.jar" />
+	<context id="my" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressDate" value="false" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<!--数据库链接地址带库名
+			userId数据库账号
+			password密码-->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.11.31:3306/netloanfenqi" 
+			userId="netloanfenqi"
+			password="netloanfenqi" />
+
+		<!--类生成 targetProject="./" 配置路径 例如 D:/model 注意字符转移 -->
+		<javaModelGenerator targetPackage="com.huaxia.middleware.mybatis.entity"
+			targetProject="./">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!--xml配置文件生成 targetProject="./" 配置路径 例如 D:/model 注意字符转移 -->
+		<sqlMapGenerator   targetPackage="com.huaxia.middleware.mybatis.entity.xml"
+			targetProject="./">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		
+		
+		<!--mapper接口生成 targetProject="./" 配置路径 例如 D:/model 注意字符转移 -->
+		<javaClientGenerator targetPackage="com.huaxia.middleware.data.mybatis"
+			targetProject="./" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!--数据库表名称以及对应的类名称 -->
+
+		<table tableName="tran_account" domainObjectName="AccountEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_account_bank" domainObjectName="AccountBankEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_account_cash_voucher" domainObjectName="AccountCashVoucherEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_account_invest" domainObjectName="AccountInvestEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_activity" domainObjectName="ActivityEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_activity_share" domainObjectName="ActivityShareEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_app_versions" domainObjectName="AppVersionsEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_award_records" domainObjectName="AwardRecordsEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_bank_config" domainObjectName="BankConfigEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_cash_voucher" domainObjectName="CashVoucherEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_cash_voucher_product" domainObjectName="CashVoucherProductEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_cash_voucher_repayment_plan" domainObjectName="CashVoucherRepaymentPlanEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_check_info" domainObjectName="CheckInfoEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_cilent_sms" domainObjectName="CilentSmsEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_contraction_order" domainObjectName="ContractionOrderEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_debt_info" domainObjectName="DebtInfoEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_experience_repayment_plan" domainObjectName="ExperienceRepaymentPlanEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_notice" domainObjectName="NoticeEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_order" domainObjectName="OrderEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_order_debt_match" domainObjectName="OrderDebtMatchEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_order_expiry_cash_voucher" domainObjectName="OrderExpiryCashVoucherEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_order_his" domainObjectName="OrderHisEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_order_send_award" domainObjectName="OrderSendAwardEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>
+		<table tableName="tran_order_send_sms" domainObjectName="OrderSendSmsEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" 
+								></table>
+		<table tableName="tran_order_send_sms_detail" domainObjectName="OrderSendSmsDetailEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>	
+		<table tableName="tran_payment_base" domainObjectName="AccountEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>	
+		<table tableName="tran_product_activity" domainObjectName="ProductActivityEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>	
+		<table tableName="tran_product_agreement" domainObjectName="ProductAgreementEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>	
+		<table tableName="tran_product_agreement_template" domainObjectName="ProductAgreementTemplateEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>	
+		<table tableName="tran_product_info" domainObjectName="ProductInfoEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>	
+		<table tableName="tran_repayment_plan" domainObjectName="RepaymentPlanEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>	
+		<table tableName="tran_vericodes" domainObjectName="VericodesEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>	
+		<table tableName="yilianpay" domainObjectName="YilianPayEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>	
+		<table tableName="yiliansms" domainObjectName="YlianSmsEntity"  enableCountByExample="false" enableUpdateByExample="false" 
+								enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" ></table>							
+	</context>
+</generatorConfiguration>
